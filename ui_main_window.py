@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowWxLksd.ui'
+## Form generated from reading UI file 'main_windowzrIGGI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.1
 ##
@@ -18,7 +18,7 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QGridLayout, QMainWindow, QMenu,
     QMenuBar, QSizePolicy, QStatusBar, QTabWidget,
-    QVBoxLayout, QWidget)
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -35,9 +35,9 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.tabWidget = QTabWidget(self.centralwidget)
         self.tabWidget.setObjectName(u"tabWidget")
-        self.tab = QWidget()
-        self.tab.setObjectName(u"tab")
-        self.tabWidget.addTab(self.tab, "")
+        self.tab_worklog = QWidget()
+        self.tab_worklog.setObjectName(u"tab_worklog")
+        self.tabWidget.addTab(self.tab_worklog, "")
         self.tab_2 = QWidget()
         self.tab_2.setObjectName(u"tab_2")
         self.tabWidget.addTab(self.tab_2, "")
@@ -45,11 +45,6 @@ class Ui_MainWindow(object):
         self.tab_3.setObjectName(u"tab_3")
         self.gridLayout_2 = QGridLayout(self.tab_3)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.verticalLayout = QVBoxLayout()
-        self.verticalLayout.setObjectName(u"verticalLayout")
-
-        self.gridLayout_2.addLayout(self.verticalLayout, 0, 0, 1, 1)
-
         self.tabWidget.addTab(self.tab_3, "")
 
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
@@ -80,7 +75,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -90,7 +85,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.actionwefwefwef.setText(QCoreApplication.translate("MainWindow", u"wefwefwef", None))
         self.actionwefwefwef_2.setText(QCoreApplication.translate("MainWindow", u"wefwefwef", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"\uc5c5\ubb34\uc77c\uc9c0", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_worklog), QCoreApplication.translate("MainWindow", u"\uc5c5\ubb34\uc77c\uc9c0", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"\uc778\uc218\uc778\uacc4", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"\uc124\ube44", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
