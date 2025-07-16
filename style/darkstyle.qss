@@ -1,0 +1,196 @@
+QWidget {
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+    font-family: '맑은 고딕';
+    font-size: 9pt;
+}
+
+/* QMainWindow 배경 */
+QMainWindow {
+    background-color: #2b2b2b;
+}
+
+/* 메뉴바 */
+QMenuBar {
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+}
+
+QMenuBar::item {
+    background-color: #2b2b2b;
+    padding: 6px 10px;
+}
+
+QMenuBar::item:selected {
+    background-color: #3c3c3c;
+}
+
+/* 메뉴 드롭다운 */
+QMenu {
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+    border: 1px solid #444;
+}
+
+QMenu::item:selected {
+    background-color: #505050;
+}
+
+/* 버튼 */
+QPushButton {
+    background-color: #3a3a3a;
+    color: white;
+    border: 1px solid #555;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+QPushButton:hover {
+    background-color: #4d4d4d;
+}
+
+/* 라벨 */
+QLabel {
+    color: #f0f0f0;
+}
+
+/* QFrame */
+QFrame {
+    background-color: #333333;
+    border: 1px solid #555;
+    border-radius: 6px;
+}
+
+/* 텍스트박스 */
+QLineEdit, QTextEdit {
+    background-color: #3a3a3a;
+    color: white;
+    border: 1px solid #666;
+    padding: 4px;
+}
+
+/* 테이블 */
+QTableWidget {
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    gridline-color: #444;
+    selection-background-color: #555555;
+}
+
+QHeaderView::section {
+    background-color: #16365C;
+    color: #f0f0f0;
+    padding: 4px;
+    border: 1px solid #444;
+}
+/* 탭 전체 배경 */
+QTabWidget::pane {
+    border: 1px solid #444;
+    background: #2e2e2e;
+}
+
+/* 탭 바 배경 */
+QTabBar {
+    background-color: #2b2b2b;
+}
+
+/* 탭 항목 (기본 상태) */
+QTabBar::tab {
+    background: #3a3a3a;
+    color: #ccc;
+    padding: 3px 8px;
+    border: 1px solid #555;
+    border-bottom: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-right: 2px;
+}
+
+/* 탭 항목 (선택된 상태) */
+QTabBar::tab:selected {
+    background: #4d4d4d;
+    color: #fff;
+    border-bottom: 2px solid #2e2e2e;
+}
+
+/* 마우스 호버 */
+QTabBar::tab:hover {
+    background: #505050;
+}
+QScrollBar:vertical {
+    background: #2b2b2b;
+    width: 12px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #555;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #777;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    background: none;
+    height: 0px;
+}
+
+/* 수평 스크롤바 */
+QScrollBar:horizontal {
+    background: #2b2b2b;
+    height: 12px;
+    margin: 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #555;
+    border-radius: 6px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #777;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    background: none;
+    width: 0px;
+}
+
+/* 스크롤바 트랙 여백 */
+QScrollBar::add-page, QScrollBar::sub-page {
+    background: none;
+}
+QSizeGrip {
+    image: none; /* 그림 없애기 (또는 대체 이미지 설정) */
+    width: 12px;
+    height: 12px;
+    margin: 0px 4px 4px 0px; /* 위치 미세 조정 */
+    background: transparent; /* 배경 투명 */
+}
+/* splitter 자체 배경 */
+QSplitter {
+    background-color: #86E57F;
+}
+
+/* 가로 splitter의 핸들 (중간 드래그 바) */
+QSplitter::handle:horizontal {
+    background-color: #86E57F;
+    height: 30px;  /* 수평 splitter는 높이로 설정 */
+}
+
+/* 세로 splitter의 핸들 (중간 드래그 바) */
+QSplitter::handle:vertical {
+    background-color: #86E57F;
+    width: 30px;  /* 수직 splitter는 너비로 설정 */
+}
+
+/* 드래그 시 하이라이트 */
+QSplitter::handle:hover {
+    background-color: #86E57F;
+}
