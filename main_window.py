@@ -1,6 +1,6 @@
 import sys
 from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QMenuBar, QMenu, QVBoxLayout
-from ui_main_window import Ui_MainWindow
+from ui.ui_main_window import Ui_MainWindow
 from sub_worklog_widget import SubWorklogForm
 from layout.worklog_layout import setup_worklog_tab_ui
 import mariadb
