@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowzrIGGI.ui'
+## Form generated from reading UI file 'main_windowJeJUhW.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.1
 ##
@@ -29,6 +29,8 @@ class Ui_MainWindow(object):
         self.actionwefwefwef.setObjectName(u"actionwefwefwef")
         self.actionwefwefwef_2 = QAction(MainWindow)
         self.actionwefwefwef_2.setObjectName(u"actionwefwefwef_2")
+        self.actionOpen_FIle = QAction(MainWindow)
+        self.actionOpen_FIle.setObjectName(u"actionOpen_FIle")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
@@ -70,6 +72,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuSettings.menuAction())
         self.menubar.addAction(self.menuDB.menuAction())
         self.menubar.addAction(self.menuRecipe.menuAction())
+        self.menuFile.addAction(self.actionOpen_FIle)
         self.menuSettings.addAction(self.actionwefwefwef_2)
         self.menuDB.addAction(self.actionwefwefwef)
 
@@ -84,7 +87,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.actionwefwefwef.setText(QCoreApplication.translate("MainWindow", u"wefwefwef", None))
-        self.actionwefwefwef_2.setText(QCoreApplication.translate("MainWindow", u"wefwefwef", None))
+        self.actionwefwefwef_2.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.actionOpen_FIle.setText(QCoreApplication.translate("MainWindow", u"Open FIle", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_worklog), QCoreApplication.translate("MainWindow", u"\uc5c5\ubb34\uc77c\uc9c0", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"\uc778\uc218\uc778\uacc4", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"\uc124\ube44", None))

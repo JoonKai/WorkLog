@@ -53,6 +53,7 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionOpen_FIle"/>
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="title">
@@ -84,7 +85,12 @@
   </action>
   <action name="actionwefwefwef_2">
    <property name="text">
-    <string>wefwefwef</string>
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionOpen_FIle">
+   <property name="text">
+    <string>Open FIle</string>
    </property>
   </action>
  </widget>

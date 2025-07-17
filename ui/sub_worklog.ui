@@ -16,15 +16,6 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QTableWidget" name="tableWidget">
-     <property name="dragEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="gridStyle">
-      <enum>Qt::PenStyle::SolidLine</enum>
-     </property>
-     <property name="sortingEnabled">
-      <bool>true</bool>
-     </property>
      <property name="rowCount">
       <number>7</number>
      </property>

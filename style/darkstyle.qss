@@ -2,7 +2,7 @@ QWidget {
     background-color: #2b2b2b;
     color: #f0f0f0;
     font-family: '맑은 고딕';
-    font-size: 9pt;
+    font-size: 8pt;
 }
 
 /* QMainWindow 배경 */
@@ -12,22 +12,22 @@ QMainWindow {
 
 /* 메뉴바 */
 QMenuBar {
-    background-color: #2b2b2b;
+    background-color:rgb(0, 70, 61);
     color: #f0f0f0;
 }
 
 QMenuBar::item {
-    background-color: #2b2b2b;
+    background-color: rgb(0, 70, 61);
     padding: 6px 10px;
 }
 
 QMenuBar::item:selected {
-    background-color: #3c3c3c;
+    background-color:rgb(0, 154, 121);
 }
 
 /* 메뉴 드롭다운 */
 QMenu {
-    background-color: #2b2b2b;
+    background-color: #rgb(0, 154, 121);
     color: #f0f0f0;
     border: 1px solid #444;
 }

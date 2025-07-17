@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'sub_workloglhgBlN.ui'
+## Form generated from reading UI file 'sub_worklogfzZLlV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.1
 ##
@@ -46,7 +46,11 @@ class Ui_Form(object):
         self.tableWidget.setHorizontalHeaderItem(7, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(8, __qtablewidgetitem8)
+        if (self.tableWidget.rowCount() < 7):
+            self.tableWidget.setRowCount(7)
         self.tableWidget.setObjectName(u"tableWidget")
+        self.tableWidget.setRowCount(7)
+        self.tableWidget.verticalHeader().setVisible(False)
 
         self.gridLayout.addWidget(self.tableWidget, 0, 0, 1, 1)
 
