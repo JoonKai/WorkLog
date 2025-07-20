@@ -118,19 +118,19 @@ QTabBar::tab:hover {
     background: #505050;
 }
 QScrollBar:vertical {
-    background: #2b2b2b;
+    background:rgb(236, 101, 97);
     width: 12px;
     margin: 0px;
 }
 
 QScrollBar::handle:vertical {
-    background: #555;
+    background: #rgb(236, 101, 97);
     border-radius: 6px;
     min-height: 20px;
 }
 
 QScrollBar::handle:vertical:hover {
-    background: #777;
+    background: #rgb(236, 101, 97);
 }
 
 QScrollBar::add-line:vertical,
@@ -141,19 +141,19 @@ QScrollBar::sub-line:vertical {
 
 /* 수평 스크롤바 */
 QScrollBar:horizontal {
-    background: #2b2b2b;
+    background: #rgb(236, 101, 97);
     height: 12px;
     margin: 0px;
 }
 
 QScrollBar::handle:horizontal {
-    background: #555;
+    background: #rgb(236, 101, 97);
     border-radius: 6px;
     min-width: 20px;
 }
 
 QScrollBar::handle:horizontal:hover {
-    background: #777;
+    background: #rgb(236, 101, 97);
 }
 
 QScrollBar::add-line:horizontal,
