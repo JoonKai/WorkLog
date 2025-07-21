@@ -2,7 +2,7 @@ QWidget {
     background-color: #2b2b2b;
     color: #f0f0f0;
     font-family: '맑은 고딕';
-    font-size: 8pt;
+    font-size: 9pt;
 }
 
 /* QMainWindow 배경 */
@@ -12,22 +12,22 @@ QMainWindow {
 
 /* 메뉴바 */
 QMenuBar {
-    background-color:rgb(0, 70, 61);
+    background-color:rgb(27, 27, 27);
     color: #f0f0f0;
 }
 
 QMenuBar::item {
-    background-color: rgb(0, 70, 61);
+    background-color: rgb(27, 27, 27);
     padding: 6px 10px;
 }
 
 QMenuBar::item:selected {
-    background-color:rgb(0, 154, 121);
+    background-color: #3c3c3c;
 }
 
 /* 메뉴 드롭다운 */
 QMenu {
-    background-color: #rgb(0, 154, 121);
+    background-color:#3c3c3c;
     color: #f0f0f0;
     border: 1px solid #444;
 }
@@ -73,7 +73,7 @@ QLineEdit, QTextEdit {
 QTableWidget {
     background-color: #2e2e2e;
     color: #f0f0f0;
-    gridline-color: #444;
+    gridline-color: #000000;
     selection-background-color: #555555;
 }
 
@@ -85,7 +85,7 @@ QHeaderView::section {
 }
 /* 탭 전체 배경 */
 QTabWidget::pane {
-    border: 1px solid #444;
+    border: 1px solid #000000;  /* 변경됨 */
     background: #2e2e2e;
 }
 
@@ -96,21 +96,23 @@ QTabBar {
 
 /* 탭 항목 (기본 상태) */
 QTabBar::tab {
-    background: #3a3a3a;
+    background: rgb(27, 27, 27);
     color: #ccc;
     padding: 3px 8px;
-    border: 1px solid #555;
+    border: 1px solid #000000;  /* 변경됨 */
     border-bottom: none;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    margin-right: 2px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-right: 0px;
 }
 
 /* 탭 항목 (선택된 상태) */
 QTabBar::tab:selected {
     background: #4d4d4d;
     color: #fff;
-    border-bottom: 2px solid #2e2e2e;
+    border-bottom: 5px solid #E36C74;  /* 선택 강조 테두리는 유지 */
+    border-left: 1px solid #000000;    /* 추가: 좌우 테두리 유지 */
+    border-right: 1px solid #000000;
 }
 
 /* 마우스 호버 */
@@ -118,19 +120,19 @@ QTabBar::tab:hover {
     background: #505050;
 }
 QScrollBar:vertical {
-    background:rgb(236, 101, 97);
+    background: #2b2b2b;
     width: 12px;
     margin: 0px;
 }
 
 QScrollBar::handle:vertical {
-    background: #rgb(236, 101, 97);
+    background: #E36C74;
     border-radius: 6px;
     min-height: 20px;
 }
 
 QScrollBar::handle:vertical:hover {
-    background: #rgb(236, 101, 97);
+    background: #E36C74;
 }
 
 QScrollBar::add-line:vertical,
@@ -141,19 +143,19 @@ QScrollBar::sub-line:vertical {
 
 /* 수평 스크롤바 */
 QScrollBar:horizontal {
-    background: #rgb(236, 101, 97);
+    background: #2b2b2b;
     height: 12px;
     margin: 0px;
 }
 
 QScrollBar::handle:horizontal {
-    background: #rgb(236, 101, 97);
+    background: #E36C74;
     border-radius: 6px;
     min-width: 20px;
 }
 
 QScrollBar::handle:horizontal:hover {
-    background: #rgb(236, 101, 97);
+    background:rgb(236, 138, 145);
 }
 
 QScrollBar::add-line:horizontal,
@@ -175,22 +177,28 @@ QSizeGrip {
 }
 /* splitter 자체 배경 */
 QSplitter {
-    background-color: #86E57F;
+    background-color: #E36C74;
+    margin: 5px
 }
 
 /* 가로 splitter의 핸들 (중간 드래그 바) */
 QSplitter::handle:horizontal {
-    background-color: #86E57F;
+    background-color: #E36C74;
     height: 30px;  /* 수평 splitter는 높이로 설정 */
 }
 
 /* 세로 splitter의 핸들 (중간 드래그 바) */
 QSplitter::handle:vertical {
-    background-color: #86E57F;
+    background-color: #E36C74;
     width: 30px;  /* 수직 splitter는 너비로 설정 */
 }
 
 /* 드래그 시 하이라이트 */
 QSplitter::handle:hover {
-    background-color: #86E57F;
+    background-color: #E36C74;
+}
+QStatusBar {
+    background-color: rgb(27, 27, 27);  /* 배경 색상 */
+    color: #ffffff;             /* 글자 색상 */
+    border-top: 1px solid #444; /* 상단 테두리 */
 }
