@@ -13,23 +13,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow,self).__init__()
         self.setupUi(self)
-        # Settings 메뉴 클릭 시 다이얼로그 띄우기
         self.mn_settings.triggered.connect(self.open_settings_dialog)
         self.mn_Schedule.triggered.connect(self.open_mdi_Schedule)
         
     def open_settings_dialog(self):
         dlg = Open_Settings(self)
-        dlg.exec()  # modal
+        dlg.exec()
 
     def open_mdi_Schedule(self):
-        # QWidget 기반 UI를 QMdiSubWindow로 감싸기
-        sub_widget = SubScheduleForm(self)   # QWidget 기반 UI라 가정
+        sub_widget = SubScheduleForm(self)
         sub = QMdiSubWindow()
         sub.setWidget(sub_widget)
-        sub.setWindowTitle("Schedule Window")
+        sub.setWindowTitle("PM 스케쥴쥴")
         sub.resize(500, 400)
-
-        # mdi_area는 Ui_MainWindow에서 선언된 QMdiArea 위젯의 objectName과 같아야 함
         self.mdiArea.addSubWindow(sub)
         sub.show()
     
