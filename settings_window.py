@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QDialog, QLabel
+from PySide6.QtWidgets import QDialog
 
 
 class Open_Settings(QDialog):
