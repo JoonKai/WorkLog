@@ -1,9 +1,10 @@
 import sys
-from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QMenuBar, QMenu, QVBoxLayout, QSplitter
+from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QMenuBar, QMenu, QVBoxLayout, QSplitter, QMdiSubWindow
 from PySide6.QtCore import Qt
 from settings_window import Open_Settings
 from ui.ui_main_window import Ui_MainWindow
 from sub_worklog_widget import SubWorklogForm
+from sub_schedule_widget import SubScheduleForm
 from layout.worklog_layout import setup_worklog_tab_ui
 import mariadb
 
@@ -14,29 +15,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         # Settings 메뉴 클릭 시 다이얼로그 띄우기
         self.mn_settings.triggered.connect(self.open_settings_dialog)
+        self.mn_Schedule.triggered.connect(self.open_mdi_Schedule)
         
     def open_settings_dialog(self):
         dlg = Open_Settings(self)
         dlg.exec()  # modal
-    # def load_worklog_form(self):
-    #     container = self.tab_worklog  # 디자이너에서 만든 탭 내부 위젯
 
-    #     # 레이아웃이 없으면 생성
-    #     if container.layout() is None:
-    #         layout = QVBoxLayout(container)
-    #         container.setLayout(layout)
-    #     else:
-    #         layout = container.layout()
+    def open_mdi_Schedule(self):
+        # QWidget 기반 UI를 QMdiSubWindow로 감싸기
+        sub_widget = SubScheduleForm(self)   # QWidget 기반 UI라 가정
+        sub = QMdiSubWindow()
+        sub.setWidget(sub_widget)
+        sub.setWindowTitle("Schedule Window")
+        sub.resize(500, 400)
 
-    #     # 기존 위젯 정리
-    #     for i in reversed(range(layout.count())):
-    #         widget = layout.itemAt(i).widget()
-    #         if widget:
-    #             widget.setParent(None)
-
-    #     # 새로운 폼 넣기
-    #     self.sub_form = SubWorklogForm()
-    #     layout.addWidget(self.sub_form)
+        # mdi_area는 Ui_MainWindow에서 선언된 QMdiArea 위젯의 objectName과 같아야 함
+        self.mdiArea.addSubWindow(sub)
+        sub.show()
+    
 
 
 app = QApplication(sys.argv)
