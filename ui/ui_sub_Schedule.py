@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'sub_SchedulenoEoKo.ui'
+## Form generated from reading UI file 'sub_ScheduleMNsENz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.1
 ##
@@ -15,51 +15,43 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCalendarWidget, QFrame, QGridLayout,
-    QHBoxLayout, QPushButton, QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QCalendarWidget, QGridLayout, QPushButton,
+    QSizePolicy, QVBoxLayout, QWidget)
 
 class Ui_mdi_schedule(object):
     def setupUi(self, mdi_schedule):
         if not mdi_schedule.objectName():
             mdi_schedule.setObjectName(u"mdi_schedule")
-        mdi_schedule.resize(790, 569)
+        mdi_schedule.resize(805, 592)
         self.gridLayout = QGridLayout(mdi_schedule)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.frame = QFrame(mdi_schedule)
-        self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Shadow.Raised)
-        self.gridLayout_2 = QGridLayout(self.frame)
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.calendarWidget = QCalendarWidget(self.frame)
-        self.calendarWidget.setObjectName(u"calendarWidget")
-
-        self.gridLayout_2.addWidget(self.calendarWidget, 0, 0, 1, 1)
-
-
-        self.horizontalLayout.addWidget(self.frame)
-
-        self.frame_2 = QFrame(mdi_schedule)
-        self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
-        self.btn_opencount = QPushButton(self.frame_2)
+        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.btn_opencount = QPushButton(mdi_schedule)
         self.btn_opencount.setObjectName(u"btn_opencount")
-        self.btn_opencount.setGeometry(QRect(10, 10, 141, 24))
-        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btn_opencount.sizePolicy().hasHeightForWidth())
         self.btn_opencount.setSizePolicy(sizePolicy)
 
-        self.horizontalLayout.addWidget(self.frame_2)
+        self.verticalLayout.addWidget(self.btn_opencount)
 
-        self.horizontalLayout.setStretch(0, 7)
-        self.horizontalLayout.setStretch(1, 3)
+        self.pushButton = QPushButton(mdi_schedule)
+        self.pushButton.setObjectName(u"pushButton")
 
-        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+        self.verticalLayout.addWidget(self.pushButton)
+
+        self.calendarWidget = QCalendarWidget(mdi_schedule)
+        self.calendarWidget.setObjectName(u"calendarWidget")
+
+        self.verticalLayout.addWidget(self.calendarWidget)
+
+        self.verticalLayout.setStretch(0, 1)
+        self.verticalLayout.setStretch(1, 1)
+        self.verticalLayout.setStretch(2, 20)
+
+        self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
 
 
         self.retranslateUi(mdi_schedule)
@@ -71,5 +63,6 @@ class Ui_mdi_schedule(object):
     def retranslateUi(self, mdi_schedule):
         mdi_schedule.setWindowTitle(QCoreApplication.translate("mdi_schedule", u"Form", None))
         self.btn_opencount.setText(QCoreApplication.translate("mdi_schedule", u"Open PM Count", None))
+        self.pushButton.setText(QCoreApplication.translate("mdi_schedule", u"\uc2a4\ucf00\uc974 \uc801\uc6a9", None))
     # retranslateUi
 
