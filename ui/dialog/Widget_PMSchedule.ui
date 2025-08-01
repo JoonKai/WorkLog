@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>593</width>
-    <height>528</height>
+    <width>729</width>
+    <height>533</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>PM 카운트</string>
+   <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -46,21 +46,49 @@
             <item>
              <widget class="QPushButton" name="pushButton">
               <property name="text">
-               <string>파일저장</string>
+               <string>레시피 열기</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>레시피 저장</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QPushButton" name="pushButton_2">
               <property name="text">
-               <string>다른이름으로 저장</string>
+               <string>레시피 다른이름으로 저장</string>
               </property>
              </widget>
             </item>
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="pushButton_4">
+              <property name="text">
+               <string>레시피 </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_5">
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </item>
@@ -120,6 +148,31 @@
        <row/>
        <column>
         <property name="text">
+         <string>위치</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>MOCVD</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>현황</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>장비명</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>MES Code</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
          <string>Chamber</string>
         </property>
        </column>
@@ -130,20 +183,32 @@
        </column>
        <column>
         <property name="text">
-         <string>진행도</string>
+         <string>Daily Run</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>PM 기준</string>
+         <string>PM 예정 횟수</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>날짜</string>
+         <string>Filter 예정 횟수</string>
         </property>
-        <property name="icon">
-         <iconset theme="QIcon::ThemeIcon::DocumentOpenRecent"/>
+       </column>
+       <column>
+        <property name="text">
+         <string>PM  예상 날짜</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Filter 예상 날짜</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>비고</string>
         </property>
        </column>
       </widget>
@@ -153,27 +218,5 @@
   </layout>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>Dialog</receiver>
-   <slot>savetable()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>411</x>
-     <y>37</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>587</x>
-     <y>112</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
- <slots>
-  <signal>signal1()</signal>
-  <signal>signal2()</signal>
-  <slot>savetable()</slot>
- </slots>
+ <connections/>
 </ui>
