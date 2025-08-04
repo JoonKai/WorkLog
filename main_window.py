@@ -5,6 +5,7 @@ from settings_window import Open_Settings
 from ui.ui_main_window import Ui_MainWindow
 from sub_worklog_widget import SubWorklogForm
 from sub_schedule_widget import SubScheduleForm
+from widget_webcontrol import WebControl
 from layout.worklog_layout import setup_worklog_tab_ui
 import mariadb
 
@@ -15,6 +16,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.mn_settings.triggered.connect(self.open_settings_dialog)
         self.mn_Schedule.triggered.connect(self.open_mdi_Schedule)
+        self.mn_webControl.triggered.connect(self.open_web_control)
         
     def open_settings_dialog(self):
         dlg = Open_Settings(self)
@@ -30,6 +32,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # 없으면 새로 열기
         sub_widget = SubScheduleForm(self)
+        sub = QMdiSubWindow()
+        sub.setWidget(sub_widget)
+        sub.setWindowTitle("PM 스케쥴")
+        # sub.resize(500, 400)
+        sub.setAttribute(Qt.WA_DeleteOnClose, True)
+        self.mdiArea.addSubWindow(sub)
+        sub.show()
+
+    def open_web_control(self):
+        # 이미 열려 있는지 확인
+        for sub in self.mdiArea.subWindowList():
+            if isinstance(sub.widget(), WebControl):  # 같은 타입인지 확인
+                sub.activateWindow()
+                self.mdiArea.setActiveSubWindow(sub)
+                return  # 이미 있으므로 새로 안 띄움
+
+        # 없으면 새로 열기
+        sub_widget = WebControl(self)
         sub = QMdiSubWindow()
         sub.setWidget(sub_widget)
         sub.setWindowTitle("PM 스케쥴")
