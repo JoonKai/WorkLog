@@ -57,6 +57,7 @@
      <string>Windows</string>
     </property>
     <addaction name="mn_Schedule"/>
+    <addaction name="mn_webControl"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuSettings"/>
@@ -83,6 +84,11 @@
   <action name="mn_Schedule">
    <property name="text">
     <string>Schedule</string>
+   </property>
+  </action>
+  <action name="mn_webControl">
+   <property name="text">
+    <string>WebControl</string>
    </property>
   </action>
  </widget>

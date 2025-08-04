@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowMkdKlk.ui'
+## Form generated from reading UI file 'main_windowKuJhmb.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.1
 ##
@@ -33,6 +33,8 @@ class Ui_MainWindow(object):
         self.actionOpen_FIle.setObjectName(u"actionOpen_FIle")
         self.mn_Schedule = QAction(MainWindow)
         self.mn_Schedule.setObjectName(u"mn_Schedule")
+        self.mn_webControl = QAction(MainWindow)
+        self.mn_webControl.setObjectName(u"mn_webControl")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
@@ -70,6 +72,7 @@ class Ui_MainWindow(object):
         self.menuSettings.addAction(self.mn_settings)
         self.menuDB.addAction(self.actionwefwefwef)
         self.menuWindows.addAction(self.mn_Schedule)
+        self.menuWindows.addAction(self.mn_webControl)
 
         self.retranslateUi(MainWindow)
 
@@ -82,6 +85,7 @@ class Ui_MainWindow(object):
         self.mn_settings.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.actionOpen_FIle.setText(QCoreApplication.translate("MainWindow", u"Open FIle", None))
         self.mn_Schedule.setText(QCoreApplication.translate("MainWindow", u"Schedule", None))
+        self.mn_webControl.setText(QCoreApplication.translate("MainWindow", u"WebControl", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuSettings.setTitle(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.menuDB.setTitle(QCoreApplication.translate("MainWindow", u"DB", None))

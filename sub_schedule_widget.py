@@ -1,66 +1,78 @@
-from PySide6.QtWidgets import QWidget, QVBoxLayout
-from ui.ui_sub_Schedule import Ui_mdi_schedule 
-from widget_pmschedule import Open_PMSchedule
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QSplitter, QTableWidget
 from PySide6.QtCore import Qt
-from PySide6.QtCharts import QChart, QChartView, QPieSeries, QPieSlice
+from PySide6.QtCharts import QChart, QChartView, QBarSeries, QBarSet, QBarCategoryAxis, QValueAxis, QAbstractBarSeries
+from ui.ui_sub_Schedule import Ui_mdi_schedule
+from widget_pmschedule import Open_PMSchedule
 
 class SubScheduleForm(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ui = Ui_mdi_schedule()
-        self.ui.setupUi(self)  # Form은 self가 대신함
+        self.ui.setupUi(self)
+        self.ui.pmfilterTable.setEditTriggers(QTableWidget.NoEditTriggers)
+        self.ui.ScheduleSplitter.setSizes([700,300])
+
+
+        # 막대그래프 생성
+        self.create_bar_chart()
         
-        # ✅ graphWidget 안에 파이차트 생성
-        self.add_pie_chart()
+    def create_bar_chart(self):
+        
+        # 샘플 데이터
+        pm_data = [5,3]
+        filter_data = [5,6]
+        categories = ["Total"]
 
-    def add_pie_chart(self):
-        # 데이터 준비
-        data = [("PM", 30), ("Filter", 70)]
-        total = sum([value for _, value in data])
+        # PM 시리즈
+        bar_set_pm = QBarSet("PM")
+        bar_set_pm.append(pm_data)
 
-        # ✅ 파이차트 시리즈 생성
-        series = QPieSeries()
-        slices = []
+        # Filter 시리즈
+        bar_set_filter = QBarSet("Filter")
+        bar_set_filter.append(filter_data)
 
-        # 각 조각에 퍼센트 값만 표기 (내부 표시)
-        for legend_name, value in data:
-            slice_item = series.append(legend_name, value)
-            percent = (value / total) * 100
-            slice_item.setLabel(f"{percent:.1f}%")  # 파이조각 내부는 퍼센트
-            slice_item.setLabelVisible(True)
-            slice_item.setLabelPosition(QPieSlice.LabelPosition.LabelInsideHorizontal)
-            slices.append((slice_item, legend_name))
+        # BarSeries 추가
+        series = QBarSeries()
+        series.append(bar_set_pm)
+        series.append(bar_set_filter)
 
-        # ✅ 차트 생성
+        # ✅ 막대 안에 숫자 표시
+        series.setLabelsVisible(True)
+        series.setLabelsPosition(QAbstractBarSeries.LabelsInsideEnd)  # 또는 LabelsOutsideEnd
+
+        # 차트 생성
         chart = QChart()
         chart.addSeries(series)
-        chart.setTitle("PM&Filter 비율")
-        chart.legend().setVisible(True)
-
-        # ✅ 범례 이름 강제 변경
-        markers = chart.legend().markers(series)
-        for marker, (_, legend_name) in zip(markers, slices):
-            marker.setLabel(legend_name)  # 범례는 원하는 이름 유지
-
-        # ✅ 테마 적용 (다크 테마)
+        chart.setTitle("PM && Filter 건수")
+        chart.setAnimationOptions(QChart.SeriesAnimations)
         chart.setTheme(QChart.ChartThemeDark)
 
-        # ✅ 차트 뷰 생성
+        # X축 카테고리
+        axisX = QBarCategoryAxis()
+        axisX.append(categories)
+        chart.addAxis(axisX, Qt.AlignBottom)
+        series.attachAxis(axisX)
+
+        # Y축 값
+        axisY = QValueAxis()
+        axisY.setRange(0, max(pm_data + filter_data) + 2)
+        chart.addAxis(axisY, Qt.AlignLeft)
+        series.attachAxis(axisY)
+
+        # 범례
+        chart.legend().setVisible(True)
+        chart.legend().setAlignment(Qt.AlignBottom)
+
+        # 차트뷰 생성
         chart_view = QChartView(chart)
         chart_view.setRenderHint(chart_view.renderHints())
 
-        # ✅ graphWidget에 삽입
-        layout = self.ui.graphWidget.layout()
-        if layout is None:
-            layout = QVBoxLayout(self.ui.graphWidget)
-            self.ui.graphWidget.setLayout(layout)
-        else:
-            for i in reversed(range(layout.count())):
-                layout.itemAt(i).widget().deleteLater()
-
+        # 기존 graphWidget 레이아웃에 삽입
+        layout = QVBoxLayout(self.ui.graphWidget)
         layout.addWidget(chart_view)
+        self.ui.graphWidget.setLayout(layout)
 
     def opencount(self):
         self.pm_win = Open_PMSchedule()
-        self.pm_win.setWindowModality(Qt.WindowModality.ApplicationModal)  # 앱 전체 모달
+        self.pm_win.setWindowModality(Qt.WindowModality.ApplicationModal)
         self.pm_win.show()
