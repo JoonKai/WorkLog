@@ -1,41 +1,42 @@
 QWidget {
-    background-color: #2b2b2b;
+    background-color: #404040;
     color: #f0f0f0;
     font-family: '맑은 고딕';
     font-size: 9pt;
 }
-
+/*메뉴 스타일#############################################################################################################*/
 /* QMainWindow 배경 */
 QMainWindow {
-    background-color: #2b2b2b;
+    background-color: #404040;
 }
-
 /* 메뉴바 */
 QMenuBar {
-    background-color:rgb(27, 27, 27);
+    background-color:#404040;
     color: #f0f0f0;
 }
 
 QMenuBar::item {
-    background-color: rgb(27, 27, 27);
+    background-color: #404040;
     padding: 6px 10px;
 }
 
 QMenuBar::item:selected {
-    background-color: #3c3c3c;
+    background-color: #404040;
 }
 
 /* 메뉴 드롭다운 */
 QMenu {
-    background-color:#3c3c3c;
+    background-color:#404040;
     color: #f0f0f0;
     border: 1px solid #444;
 }
-
 QMenu::item:selected {
-    background-color: #505050;
+    background-color: #404040
 }
+/*메뉴 스타일#############################################################################################################*/
 
+
+/*버튼 스타일#############################################################################################################*/
 /* 버튼 */
 QPushButton {
     background-color: #3a3a3a;
@@ -44,45 +45,58 @@ QPushButton {
     padding: 6px 12px;
     border-radius: 4px;
 }
-
 QPushButton:hover {
     background-color: #4d4d4d;
 }
+/*버튼 스타일#############################################################################################################*/
 
-/* 라벨 */
-QLabel {
+
+/*라벨 스타일#############################################################################################################*/
+QLabel#mylabel{
     color: #f0f0f0;
+    background-color: transparent;
 }
+/*라벨 스타일#############################################################################################################*/
 
-/* QFrame */
+
+/*프레임 스타일#############################################################################################################*/
 QFrame {
     background-color: #333333;
     border: 1px solid #555;
     border-radius: 6px;
 }
+/*프레임 스타일#############################################################################################################*/
 
-/* 텍스트박스 */
+
+/*텍스타박스 스타일#############################################################################################################*/
 QLineEdit, QTextEdit {
     background-color: #3a3a3a;
     color: white;
     border: 1px solid #666;
     padding: 4px;
 }
+/*텍스트박스 스타일#############################################################################################################*/
 
-/* 테이블 */
+
+/*테이블 스타일#############################################################################################################*/
 QTableWidget {
     background-color: #2e2e2e;
     color: #f0f0f0;
     gridline-color: #000000;
     selection-background-color: #555555;
 }
-
 QHeaderView::section {
     background-color: #16365C;
     color: #f0f0f0;
     padding: 4px;
     border: 1px solid #444;
 }
+/*테이블 스타일#############################################################################################################*/
+
+
+
+
+/*탭컨트롤 스타일#############################################################################################################*/
 /* 탭 전체 배경 */
 QTabWidget::pane {
     border: 1px solid #000000;  /* 변경됨 */
@@ -114,19 +128,21 @@ QTabBar::tab:selected {
     border-left: 1px solid #000000;    /* 추가: 좌우 테두리 유지 */
     border-right: 1px solid #000000;
 }
-
 /* 마우스 호버 */
 QTabBar::tab:hover {
     background: #505050;
 }
+/*탭컨트롤 스타일#############################################################################################################*/
 
-/* 수직직 스크롤바 */
+
+
+/*스크롤바 스타일#############################################################################################################*/
+/* 수직 스크롤바 */
 QScrollBar:vertical {
     background: #2b2b2b;
     width: 6px;
     margin: 0px;
 }
-
 QScrollBar::handle:vertical {
     background: #E36C74;
     border-radius: 3px;
@@ -142,7 +158,6 @@ QScrollBar::sub-line:vertical {
     background: none;
     height: 0px;
 }
-
 /* 수평 스크롤바 */
 QScrollBar:horizontal {
     background: #2b2b2b;
@@ -177,7 +192,10 @@ QSizeGrip {
     margin: 0px 4px 4px 0px; /* 위치 미세 조정 */
     background: transparent; /* 배경 투명 */
 }
-/* splitter 자체 배경 */
+/*스크롤바 스타일#############################################################################################################*/
+
+
+/*스플리터 스타일#############################################################################################################*/
 QSplitter {
     background-color: #E36C74;
     margin: 5px
@@ -199,14 +217,19 @@ QSplitter::handle:vertical {
 QSplitter::handle:hover {
     background-color: #E36C74;
 }
+/*스플리터 스타일#############################################################################################################*/
+
+
+/*스테이터스바 스타일#############################################################################################################*/
 QStatusBar {
     background-color: rgb(27, 27, 27);  /* 배경 색상 */
     color: #ffffff;             /* 글자 색상 */
     border-top: 1px solid #444; /* 상단 테두리 */
 }
+/*스테이터스바 스타일#############################################################################################################*/
 
 
-
+/*캘린더 스타일#############################################################################################################*/
 CalendarWidget QToolButton {
   	height: 60px;
   	width: 150px;
@@ -233,7 +256,6 @@ QCalendarWidget QSpinBox {
     selection-background-color: #555;
     selection-color: white;
 }
-
 /* 위, 아래 버튼 */
 QCalendarWidget QSpinBox::up-button,
 QCalendarWidget QSpinBox::down-button {
@@ -244,25 +266,21 @@ QCalendarWidget QSpinBox::down-button {
     border-left: 1px solid #444;
     padding: 1px;
 }
-
 /* hover 효과 */
 QCalendarWidget QSpinBox::up-button:hover,
 QCalendarWidget QSpinBox::down-button:hover {
     background-color: #505050;
 }
-
 /* 화살표 크기만 조정 (기본 Qt 아이콘 사용) */
 QCalendarWidget QSpinBox::up-arrow,
 QCalendarWidget QSpinBox::down-arrow {
     width: 8px;
     height: 8px;
 }
-   
 /* header row */
 QCalendarWidget QWidget { alternate-background-color: rgb(56, 56, 56); }
    
 /* normal days */
-  
 QCalendarWidget QAbstractItemView:enabled {
     font-size: 12px;
     color: rgb(255, 255, 255);
@@ -270,7 +288,6 @@ QCalendarWidget QAbstractItemView:enabled {
     selection-background-color: transparent; /* 배경 투명 */
     selection-color: rgb(255, 230, 0);
 }
-
 /* 선택된 아이템 테두리 효과 흉내 */
 QCalendarWidget QAbstractItemView:item:selected {
         background-color: rgba(177, 177, 177, 50); /* 연한 하이라이트 */
@@ -281,8 +298,19 @@ QCalendarWidget QWidget#qt_calendar_navigationbar
 { 
    background-color: #2b2b2b; 
 }
-
 QCalendarWidget QAbstractItemView:disabled 
 { 
    color: rgb(64, 64, 64); 
 }
+/*캘린더 스타일#############################################################################################################*/
+
+/*콤보박스 스타일#############################################################################################################*/
+QComboBox {
+    text-align: center;
+    qproperty-alignment: 'AlignCenter';
+}
+
+QComboBox QAbstractItemView {
+    text-align: center;
+}
+/*콤보박스 스타일#############################################################################################################*/
