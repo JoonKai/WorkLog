@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowKuJhmb.ui'
+## Form generated from reading UI file 'main_windowpvJAIA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.1
 ##
@@ -58,6 +58,10 @@ class Ui_MainWindow(object):
         self.menuRecipe.setObjectName(u"menuRecipe")
         self.menuWindows = QMenu(self.menubar)
         self.menuWindows.setObjectName(u"menuWindows")
+        self.menu = QMenu(self.menubar)
+        self.menu.setObjectName(u"menu")
+        self.menu_2 = QMenu(self.menubar)
+        self.menu_2.setObjectName(u"menu_2")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -68,6 +72,8 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuDB.menuAction())
         self.menubar.addAction(self.menuRecipe.menuAction())
         self.menubar.addAction(self.menuWindows.menuAction())
+        self.menubar.addAction(self.menu.menuAction())
+        self.menubar.addAction(self.menu_2.menuAction())
         self.menuFile.addAction(self.actionOpen_FIle)
         self.menuSettings.addAction(self.mn_settings)
         self.menuDB.addAction(self.actionwefwefwef)
@@ -84,12 +90,14 @@ class Ui_MainWindow(object):
         self.actionwefwefwef.setText(QCoreApplication.translate("MainWindow", u"wefwefwef", None))
         self.mn_settings.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.actionOpen_FIle.setText(QCoreApplication.translate("MainWindow", u"Open FIle", None))
-        self.mn_Schedule.setText(QCoreApplication.translate("MainWindow", u"Schedule", None))
-        self.mn_webControl.setText(QCoreApplication.translate("MainWindow", u"WebControl", None))
+        self.mn_Schedule.setText(QCoreApplication.translate("MainWindow", u"PM&Filter \uc2a4\ucf00\uc974\ub7ec", None))
+        self.mn_webControl.setText(QCoreApplication.translate("MainWindow", u"Parts \uad00\ub9ac", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuSettings.setTitle(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.menuDB.setTitle(QCoreApplication.translate("MainWindow", u"DB", None))
-        self.menuRecipe.setTitle(QCoreApplication.translate("MainWindow", u"Recipes", None))
-        self.menuWindows.setTitle(QCoreApplication.translate("MainWindow", u"Windows", None))
+        self.menuRecipe.setTitle(QCoreApplication.translate("MainWindow", u"\uc81c\uc870", None))
+        self.menuWindows.setTitle(QCoreApplication.translate("MainWindow", u"\uc124\ube44", None))
+        self.menu.setTitle(QCoreApplication.translate("MainWindow", u"\uacf5\uc815", None))
+        self.menu_2.setTitle(QCoreApplication.translate("MainWindow", u"\uae30\ud0c0", None))
     # retranslateUi
 

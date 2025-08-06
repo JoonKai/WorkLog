@@ -49,21 +49,33 @@
    </widget>
    <widget class="QMenu" name="menuRecipe">
     <property name="title">
-     <string>Recipes</string>
+     <string>제조</string>
     </property>
    </widget>
    <widget class="QMenu" name="menuWindows">
     <property name="title">
-     <string>Windows</string>
+     <string>설비</string>
     </property>
     <addaction name="mn_Schedule"/>
     <addaction name="mn_webControl"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>공정</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>기타</string>
+    </property>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuSettings"/>
    <addaction name="menuDB"/>
    <addaction name="menuRecipe"/>
    <addaction name="menuWindows"/>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionwefwefwef">
@@ -83,12 +95,12 @@
   </action>
   <action name="mn_Schedule">
    <property name="text">
-    <string>Schedule</string>
+    <string>PM&amp;Filter 스케쥴러</string>
    </property>
   </action>
   <action name="mn_webControl">
    <property name="text">
-    <string>WebControl</string>
+    <string>Parts 관리</string>
    </property>
   </action>
  </widget>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Widget_PMSchedulewgFkWB.ui'
+## Form generated from reading UI file 'Widget_PMScheduletKpRmR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.1
 ##
@@ -64,16 +64,20 @@ class Ui_Form(object):
 
         self.horizontalLayout_4.addWidget(self.label)
 
-        self.lineEdit = QLineEdit(Form)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.recipeTextbox = QLineEdit(Form)
+        self.recipeTextbox.setObjectName(u"recipeTextbox")
         sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
-        self.lineEdit.setSizePolicy(sizePolicy1)
-        self.lineEdit.setReadOnly(True)
+        sizePolicy1.setHeightForWidth(self.recipeTextbox.sizePolicy().hasHeightForWidth())
+        self.recipeTextbox.setSizePolicy(sizePolicy1)
+        font = QFont()
+        font.setBold(True)
+        self.recipeTextbox.setFont(font)
+        self.recipeTextbox.setAutoFillBackground(False)
+        self.recipeTextbox.setReadOnly(True)
 
-        self.horizontalLayout_4.addWidget(self.lineEdit)
+        self.horizontalLayout_4.addWidget(self.recipeTextbox)
 
         self.pushButton = QPushButton(Form)
         self.pushButton.setObjectName(u"pushButton")
@@ -143,6 +147,8 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
         self.pushButton_4.clicked.connect(Form.addItem)
+        self.pushButton.clicked.connect(Form.openRecipe)
+        self.pushButton_3.clicked.connect(Form.saveRecipe)
 
         QMetaObject.connectSlotsByName(Form)
     # setupUi

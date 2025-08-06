@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'sub_ScheduleJGlBBC.ui'
+## Form generated from reading UI file 'Widget_ScheduleskpxEs.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.1
 ##
@@ -70,7 +70,7 @@ class Ui_mdi_schedule(object):
         self.calendarWidget.setObjectName(u"calendarWidget")
         sizePolicy1.setHeightForWidth(self.calendarWidget.sizePolicy().hasHeightForWidth())
         self.calendarWidget.setSizePolicy(sizePolicy1)
-        self.calendarWidget.setCursor(QCursor(Qt.CursorShape.OpenHandCursor))
+        self.calendarWidget.setCursor(QCursor(Qt.CursorShape.ArrowCursor))
         self.calendarWidget.setGridVisible(True)
 
         self.verticalLayout_2.addWidget(self.calendarWidget)

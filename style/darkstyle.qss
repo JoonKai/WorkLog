@@ -79,17 +79,39 @@ QLineEdit, QTextEdit {
 
 
 /*테이블 스타일#############################################################################################################*/
-QTableWidget {
-    background-color: #2e2e2e;
+/*mocvdTable에만 적용용*/
+QTableWidget#mocvdTable {
+    background-color: #2b2b2b;
     color: #f0f0f0;
-    gridline-color: #000000;
-    selection-background-color: #555555;
+    gridline-color: #3c3c3c;
+    selection-background-color: #555555;  /* ✅ 드래그 선택 시 어두운 그레이 */
+    selection-color: #ffffff;
+    border: 1px solid #3c3c3c;
+    font-size: 13px;
+    alternate-background-color: #353535;
 }
-QHeaderView::section {
-    background-color: #16365C;
+
+QHeaderView#mocvdTable::section {
+    background-color: #3c3f41;
     color: #f0f0f0;
-    padding: 4px;
-    border: 1px solid #444;
+    padding: 56pxpx;
+    border: 1px solid #444444;
+    font-weight: bold;
+}
+
+QTableWidget#mocvdTable::item {
+    border: none;
+    padding: 2px;
+}
+
+QTableWidget#mocvdTable::item:selected {
+    background-color: #444444;  /* ✅ 선택 시 어두운 그레이 */
+    color: white;
+}
+
+QTableCornerButton#mocvdTable::section {
+    background-color: #3c3f41;
+    border: 1px solid #444444;
 }
 /*테이블 스타일#############################################################################################################*/
 
@@ -307,7 +329,7 @@ QCalendarWidget QAbstractItemView:disabled
 /*콤보박스 스타일#############################################################################################################*/
 QComboBox {
     text-align: center;
-    qproperty-alignment: 'AlignCenter';
+    alignment: 'AlignCenter';
 }
 
 QComboBox QAbstractItemView {

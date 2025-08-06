@@ -72,7 +72,7 @@
                 </sizepolicy>
                </property>
                <property name="cursor">
-                <cursorShape>OpenHandCursor</cursorShape>
+                <cursorShape>ArrowCursor</cursorShape>
                </property>
                <property name="gridVisible">
                 <bool>true</bool>

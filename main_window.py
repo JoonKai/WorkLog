@@ -12,6 +12,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(MainWindow,self).__init__()
         self.setupUi(self)
+        self.resize(1000, 700)
         self.mn_settings.triggered.connect(self.open_settings_dialog)
         self.mn_Schedule.triggered.connect(self.open_mdi_Schedule)
         self.mn_webControl.triggered.connect(self.open_web_control)
@@ -21,36 +22,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         dlg.exec()
 
     def open_mdi_Schedule(self):
-        # 이미 열려 있는지 확인
         for sub in self.mdiArea.subWindowList():
-            if isinstance(sub.widget(), SubScheduleForm):  # 같은 타입인지 확인
+            if isinstance(sub.widget(), SubScheduleForm):
                 sub.activateWindow()
                 self.mdiArea.setActiveSubWindow(sub)
-                return  # 이미 있으므로 새로 안 띄움
-
-        # 없으면 새로 열기
+                return  
         sub_widget = SubScheduleForm(self)
         sub = QMdiSubWindow()
         sub.setWidget(sub_widget)
         sub.setWindowTitle("PM 스케쥴")
-        # sub.resize(500, 400)
+        sub.resize(800, 600)
         sub.setAttribute(Qt.WA_DeleteOnClose, True)
         self.mdiArea.addSubWindow(sub)
         sub.show()
 
     def open_web_control(self):
-        # 이미 열려 있는지 확인
         for sub in self.mdiArea.subWindowList():
-            if isinstance(sub.widget(), WebControl):  # 같은 타입인지 확인
+            if isinstance(sub.widget(), WebControl): 
                 sub.activateWindow()
                 self.mdiArea.setActiveSubWindow(sub)
-                return  # 이미 있으므로 새로 안 띄움
-
-        # 없으면 새로 열기
+                return  
         sub_widget = WebControl(self)
         sub = QMdiSubWindow()
         sub.setWidget(sub_widget)
-        sub.setWindowTitle("PM 스케쥴")
+        sub.setWindowTitle("웹컨트롤롤")
         # sub.resize(500, 400)
         sub.setAttribute(Qt.WA_DeleteOnClose, True)
         self.mdiArea.addSubWindow(sub)
