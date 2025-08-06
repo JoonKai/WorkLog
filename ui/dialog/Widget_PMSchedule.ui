@@ -153,8 +153,8 @@
    <slot>addItem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>130</x>
-     <y>80</y>
+     <x>142</x>
+     <y>35</y>
     </hint>
     <hint type="destinationlabel">
      <x>152</x>
@@ -162,8 +162,42 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>openRecipe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>631</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>617</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>saveRecipe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>710</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>691</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>addItem()</slot>
+  <slot>openRecipe()</slot>
+  <slot>saveRecipe()</slot>
  </slots>
 </ui>

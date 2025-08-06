@@ -1,12 +1,10 @@
 import sys
-from PySide6.QtWidgets import QApplication, QWidget, QMainWindow, QMenuBar, QMenu, QVBoxLayout, QSplitter, QMdiSubWindow
+from PySide6.QtWidgets import QApplication, QMainWindow, QMdiSubWindow
 from PySide6.QtCore import Qt
-from settings_window import Open_Settings
-from ui.ui_main_window import Ui_MainWindow
-from sub_worklog_widget import SubWorklogForm
-from sub_schedule_widget import SubScheduleForm
-from widget_webcontrol import WebControl
-from layout.worklog_layout import setup_worklog_tab_ui
+from controller.widget_settings import OpenSettings
+from ui.windows.ui_main_window import Ui_MainWindow
+from controller.widget_schedule import SubScheduleForm
+from controller.widget_webcontrol import WebControl
 import mariadb
 
 
@@ -19,7 +17,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.mn_webControl.triggered.connect(self.open_web_control)
         
     def open_settings_dialog(self):
-        dlg = Open_Settings(self)
+        dlg = OpenSettings(self)
         dlg.exec()
 
     def open_mdi_Schedule(self):

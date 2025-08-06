@@ -1,8 +1,8 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QSplitter, QTableWidget
 from PySide6.QtCore import Qt
 from PySide6.QtCharts import QChart, QChartView, QBarSeries, QBarSet, QBarCategoryAxis, QValueAxis, QAbstractBarSeries
-from ui.ui_sub_Schedule import Ui_mdi_schedule
-from widget_pmschedule import Open_PMSchedule
+from ui.widget.ui_Widget_Schedule import Ui_mdi_schedule
+from controller.widget_pmschedule import Open_PMSchedule
 
 class SubScheduleForm(QWidget):
     def __init__(self, parent=None):
