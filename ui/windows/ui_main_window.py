@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_windowpvJAIA.ui'
+## Form generated from reading UI file 'main_windowVLskaY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.9.1
 ##
@@ -35,6 +35,8 @@ class Ui_MainWindow(object):
         self.mn_Schedule.setObjectName(u"mn_Schedule")
         self.mn_webControl = QAction(MainWindow)
         self.mn_webControl.setObjectName(u"mn_webControl")
+        self.mn_datavisualize = QAction(MainWindow)
+        self.mn_datavisualize.setObjectName(u"mn_datavisualize")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
@@ -58,6 +60,8 @@ class Ui_MainWindow(object):
         self.menuRecipe.setObjectName(u"menuRecipe")
         self.menuWindows = QMenu(self.menubar)
         self.menuWindows.setObjectName(u"menuWindows")
+        self.menu_3 = QMenu(self.menuWindows)
+        self.menu_3.setObjectName(u"menu_3")
         self.menu = QMenu(self.menubar)
         self.menu.setObjectName(u"menu")
         self.menu_2 = QMenu(self.menubar)
@@ -79,6 +83,8 @@ class Ui_MainWindow(object):
         self.menuDB.addAction(self.actionwefwefwef)
         self.menuWindows.addAction(self.mn_Schedule)
         self.menuWindows.addAction(self.mn_webControl)
+        self.menuWindows.addAction(self.menu_3.menuAction())
+        self.menu_3.addAction(self.mn_datavisualize)
 
         self.retranslateUi(MainWindow)
 
@@ -92,11 +98,13 @@ class Ui_MainWindow(object):
         self.actionOpen_FIle.setText(QCoreApplication.translate("MainWindow", u"Open FIle", None))
         self.mn_Schedule.setText(QCoreApplication.translate("MainWindow", u"PM&Filter \uc2a4\ucf00\uc974\ub7ec", None))
         self.mn_webControl.setText(QCoreApplication.translate("MainWindow", u"Parts \uad00\ub9ac", None))
+        self.mn_datavisualize.setText(QCoreApplication.translate("MainWindow", u"\ub370\uc774\ud130\ubd84\uc11d", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuSettings.setTitle(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.menuDB.setTitle(QCoreApplication.translate("MainWindow", u"DB", None))
         self.menuRecipe.setTitle(QCoreApplication.translate("MainWindow", u"\uc81c\uc870", None))
         self.menuWindows.setTitle(QCoreApplication.translate("MainWindow", u"\uc124\ube44", None))
+        self.menu_3.setTitle(QCoreApplication.translate("MainWindow", u"\uce21\uc815", None))
         self.menu.setTitle(QCoreApplication.translate("MainWindow", u"\uacf5\uc815", None))
         self.menu_2.setTitle(QCoreApplication.translate("MainWindow", u"\uae30\ud0c0", None))
     # retranslateUi
