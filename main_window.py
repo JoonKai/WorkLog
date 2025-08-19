@@ -62,7 +62,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         sub_widget = WebControl(self)
         sub = QMdiSubWindow()
         sub.setWidget(sub_widget)
-        sub.setWindowTitle("웹컨트롤롤")
+        sub.setWindowTitle("웹컨트롤")
         # sub.resize(500, 400)
         sub.setAttribute(Qt.WA_DeleteOnClose, True)
         self.mdiArea.addSubWindow(sub)

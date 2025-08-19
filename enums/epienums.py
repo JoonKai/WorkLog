@@ -9,9 +9,11 @@ class eSite(Enum):
     D1F=5,
     D2F=6,
     VC2F=7,
+
 class eManuType(Enum):
     양산=0,
     개발=1,
+    
 class eEquipmentModel(Enum):
     K465I=0,
     C4=1,
